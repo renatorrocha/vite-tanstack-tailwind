@@ -1,0 +1,19 @@
+name: projectName_sgtNumber-frontend
+
+services:
+    app:
+        container_name: ${COMPOSE_PROJECT_NAME}
+        build:
+            context: .
+        restart: unless-stopped
+        environment:
+            - VITE_APP_PORT=${VITE_APP_PORT}
+            - VITE_API_URL=${VITE_API_URL}
+            - VITE_API_URL=${VITE_API_URL}
+        ports:
+            - "${VITE_APP_PORT}:${VITE_APP_PORT}"
+        deploy:
+            resources:
+                limits:
+                    cpus: "0.25"
+                    memory: "512MB"
