@@ -1,9 +1,17 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./global.css";
+import "@/global.css";
+import App from '@components/providers/app';
 
-createRoot(document.getElementById("root")!).render(
-    <StrictMode>
-        <p className="text-red-400">test</p>
-    </StrictMode>
-);
+const container = document.getElementById("root");
+
+if (container) {
+    const root = createRoot(container);
+
+root.render(
+  <StrictMode>
+    <App/>
+  </StrictMode>
+)
+
+}
