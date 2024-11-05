@@ -1,50 +1,62 @@
-# React + TypeScript + Vite
+# Projeto de Template React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de template configurado com as principais bibliotecas para o desenvolvimento de uma aplicação React moderna e escalável. Este template inclui gerenciamento de estado, rotas, e uma configuração opcional com **Tailwind CSS** para estilização.
 
-Currently, two official plugins are available:
+## Stack Principal
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **React**: Biblioteca para criação de interfaces de usuário.
+-   **Tanstack React Query**: Gerenciamento de estado assíncrono e cache de dados do servidor.
+-   **Tanstack React Router**: Gerenciamento de rotas declarativo no React.
+-   **Axios**: Cliente HTTP para realizar requisições à API.
+-   **Vite**: Ferramenta de build rápida e otimizada para desenvolvimento front-end.
+-   **Tailwind CSS**: Framework de estilização utilitário para configuração rápida de CSS (opcional).
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+-   Gerenciamento de estado de dados do servidor com React Query.
+-   Gerenciamento de rotas com Tanstack React Router.
+-   Configuração pronta para consumir APIs com Axios.
+-   Configuração de **ESLint** com plugins específicos para React e TypeScript.
+-   Suporte a TypeScript para uma tipagem estática.
+-   Configuração opcional de **Tailwind CSS** para estilização.
 
-- Configure the top-level `parserOptions` property like this:
+## Estrutura de Pastas
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```plaintext
+src/
+├── assets/             # Arquivos de imagem, ícones, etc...
+├── components/         # Componentes reutilizáveis
+├── pages/              # Páginas da aplicação
+├── routes/             # Configuração das rotas com React Router
+├── services/
+│   ├── api/            # Configuração da instância do Axios
+│   ├── constants/      # Constantes do projeto
+│   ├── hooks/          # Hooks customizados
+│   ├── types/          # Tipagens e objetos Zod
+│   └── utils/          # Funções utilitárias do projeto
+
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Bibliotecas e Plugins
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Dependências
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+-   **@tanstack/react-query**: `^5.59.19`
+-   **@tanstack/react-router**: `^1.78.3`
+-   **axios**: `^1.7.7`
+-   **react**: `^18.3.1`
+-   **react-dom**: `^18.3.1`
+
+### Dependências de Desenvolvimento
+
+-   **@vitejs/plugin-react-swc**: `^3.5.0`
+-   **autoprefixer**: `^10.4.20`
+-   **eslint**: `^9.13.0`
+-   **eslint-plugin-react-hooks**: `^5.0.0`
+-   **postcss**: `^8.4.47`
+-   **tailwindcss**: `^3.4.14`
+-   **typescript**: `~5.6.2`
+
+## Contribuição
+
+Sinta-se à vontade para abrir issues ou enviar pull requests. Toda contribuição é bem-vinda!
