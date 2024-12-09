@@ -26,7 +26,7 @@
         "@semantic-release/release-notes-generator": "^14.0.1",
         "@tanstack/eslint-plugin-query": "^5.60.1",
         "@tanstack/router-devtools": "^1.81.4",
-        "@tanstack/router-plugin": "^1.78.3",
+        "@tanstack/router-plugin": "^1.86.0",
         "@types/node": "^22.9.0",
         "@types/react": "^18.3.12",
         "@types/react-dom": "^18.3.1",
